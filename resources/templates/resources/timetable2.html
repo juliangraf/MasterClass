@@ -1,0 +1,12 @@
+{% extends "resources/base_output.html" %}
+
+{% block title %}Stundenplan{% endblock %}
+
+{% block content %}
+    {% for t in timetables %}
+        {% include 'resources/timetable2_resource.html' with resource=t.resource descendants=t.descendants events_by_day=t.events_by_day time_slots=t.time_slots events_by_timeslot=t.events_by_timeslot %}
+        {% if not forloop.last %}
+            <hr class="page-break">
+        {% endif %}
+    {% endfor %}
+{% endblock %}

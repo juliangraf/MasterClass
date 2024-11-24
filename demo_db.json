@@ -1,0 +1,3123 @@
+[
+  {
+    "model": "resources.role",
+    "pk": 1,
+    "fields": {
+      "label": "Dozent",
+      "plural_label": "Dozenten",
+      "weight": 2
+    }
+  },
+  {
+    "model": "resources.role",
+    "pk": 2,
+    "fields": {
+      "label": "Sch\u00fcler",
+      "plural_label": "Sch\u00fcler",
+      "weight": 6
+    }
+  },
+  {
+    "model": "resources.role",
+    "pk": 3,
+    "fields": {
+      "label": "Raum",
+      "plural_label": "R\u00e4ume",
+      "weight": 5
+    }
+  },
+  {
+    "model": "resources.role",
+    "pk": 4,
+    "fields": {
+      "label": "Ensemble",
+      "plural_label": "Ensembles",
+      "weight": 1
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 1,
+    "fields": {
+      "label": "Brianna Morales",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 2,
+    "fields": {
+      "label": "Cynthia Anderson",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 3,
+    "fields": {
+      "label": "Julie Williams",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 4,
+    "fields": {
+      "label": "Daniel Arellano",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 5,
+    "fields": {
+      "label": "Stacy Smith",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 6,
+    "fields": {
+      "label": "Nancy Hopkins",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 7,
+    "fields": {
+      "label": "Patrick Faulkner",
+      "description": "",
+      "role": 1,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 8,
+    "fields": {
+      "label": "Charles Campbell",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 9,
+    "fields": {
+      "label": "Jacob Williams",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 10,
+    "fields": {
+      "label": "Julia Perkins",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 11,
+    "fields": {
+      "label": "Nicole Haynes",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 12,
+    "fields": {
+      "label": "Gina Patterson",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 13,
+    "fields": {
+      "label": "Jonathan Wilcox",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 14,
+    "fields": {
+      "label": "Jeffrey Ramos",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 15,
+    "fields": {
+      "label": "Joshua Moody",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 16,
+    "fields": {
+      "label": "Shawn Anderson",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 17,
+    "fields": {
+      "label": "Scott Arnold III",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 18,
+    "fields": {
+      "label": "Michael Phillips",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 19,
+    "fields": {
+      "label": "Joseph Lee",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 20,
+    "fields": {
+      "label": "Patricia Webster",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 21,
+    "fields": {
+      "label": "Keith Carlson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 22,
+    "fields": {
+      "label": "Russell Sheppard MD",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 23,
+    "fields": {
+      "label": "Erik Vega",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 24,
+    "fields": {
+      "label": "Tiffany Johnson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 25,
+    "fields": {
+      "label": "James Juarez",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 26,
+    "fields": {
+      "label": "Regina Ross",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 27,
+    "fields": {
+      "label": "Anthony Mullins",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 28,
+    "fields": {
+      "label": "Julia Mccullough",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 29,
+    "fields": {
+      "label": "Julie Hogan",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 30,
+    "fields": {
+      "label": "Nathan Cummings",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 31,
+    "fields": {
+      "label": "Stephanie Wilkinson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 32,
+    "fields": {
+      "label": "Peter Caldwell",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 33,
+    "fields": {
+      "label": "Alex Ortega",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 34,
+    "fields": {
+      "label": "Pamela Ball",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 35,
+    "fields": {
+      "label": "Connor Welch",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 36,
+    "fields": {
+      "label": "Sara Johnson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 37,
+    "fields": {
+      "label": "Frank Alexander",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 38,
+    "fields": {
+      "label": "Susan Osborne",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 39,
+    "fields": {
+      "label": "Omar Carter",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 40,
+    "fields": {
+      "label": "Barry Sandoval",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 41,
+    "fields": {
+      "label": "Travis Steele",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 42,
+    "fields": {
+      "label": "Charles Burch",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 43,
+    "fields": {
+      "label": "Bryan Harris",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 44,
+    "fields": {
+      "label": "Tyrone Banks",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 45,
+    "fields": {
+      "label": "Ruth Taylor",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 46,
+    "fields": {
+      "label": "Julie Campos",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 47,
+    "fields": {
+      "label": "Paige Hays",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 48,
+    "fields": {
+      "label": "Kristen Moore",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 49,
+    "fields": {
+      "label": "Gabriel Robinson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 50,
+    "fields": {
+      "label": "Patricia Allen",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 51,
+    "fields": {
+      "label": "Laura Santana",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 52,
+    "fields": {
+      "label": "Jennifer Rogers",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 53,
+    "fields": {
+      "label": "Brenda Johnson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 54,
+    "fields": {
+      "label": "Isaac Turner",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 55,
+    "fields": {
+      "label": "Carrie Cortez",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 56,
+    "fields": {
+      "label": "Amanda Bailey",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 57,
+    "fields": {
+      "label": "Jordan Smith",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 58,
+    "fields": {
+      "label": "George Brown",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 59,
+    "fields": {
+      "label": "Cheryl Cook",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 60,
+    "fields": {
+      "label": "Kristin Marshall",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 61,
+    "fields": {
+      "label": "Zachary Robertson",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 62,
+    "fields": {
+      "label": "Gina Hernandez",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 63,
+    "fields": {
+      "label": "Ian Collins",
+      "description": "",
+      "role": 2,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 64,
+    "fields": {
+      "label": "Kitkat",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        31,
+        46,
+        20,
+        35,
+        59
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 65,
+    "fields": {
+      "label": "iBass",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        38,
+        33,
+        40,
+        41,
+        34,
+        49
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 66,
+    "fields": {
+      "label": "Mr. Tom",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        48,
+        45,
+        29,
+        47
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 67,
+    "fields": {
+      "label": "Nutella",
+      "description": "Claus 2",
+      "role": 4,
+      "dependencies": [
+        51,
+        37,
+        58,
+        60
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 68,
+    "fields": {
+      "label": "Smarties",
+      "description": "Claus 3",
+      "role": 4,
+      "dependencies": [
+        24,
+        56,
+        55,
+        54
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 69,
+    "fields": {
+      "label": "Raffaello",
+      "description": "Nele 1",
+      "role": 4,
+      "dependencies": [
+        52,
+        50,
+        61
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 70,
+    "fields": {
+      "label": "Toffifee",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        25,
+        36,
+        32
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 71,
+    "fields": {
+      "label": "Mon Cheri",
+      "description": "Nele 3",
+      "role": 4,
+      "dependencies": [
+        23,
+        39,
+        30,
+        53
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 72,
+    "fields": {
+      "label": "Milky Way",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        26,
+        44,
+        56
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 73,
+    "fields": {
+      "label": "Mozartkugeln",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        62,
+        42,
+        57,
+        43
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 74,
+    "fields": {
+      "label": "Cantuccini",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        28,
+        24,
+        22,
+        27
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 75,
+    "fields": {
+      "label": "Sarotti",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        62,
+        25,
+        60,
+        32
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 76,
+    "fields": {
+      "label": "Pick up",
+      "description": "Michelle 3",
+      "role": 4,
+      "dependencies": [
+        26,
+        39,
+        42,
+        53
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 77,
+    "fields": {
+      "label": "Lindsay Johnson",
+      "description": "",
+      "role": 3,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 78,
+    "fields": {
+      "label": "Gounod",
+      "description": "",
+      "role": 4,
+      "dependencies": [
+        26,
+        56
+      ]
+    }
+  },
+  {
+    "model": "resources.resource",
+    "pk": 79,
+    "fields": {
+      "label": "Amy Thompson",
+      "description": "",
+      "role": 1,
+      "dependencies": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 1,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 2,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T18:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 3,
+    "fields": {
+      "label": "Abendessen",
+      "start": "2024-02-13T18:00:00Z",
+      "end": "2024-02-13T18:45:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 4,
+    "fields": {
+      "label": "Fr\u00fchst\u00fcck",
+      "start": "2024-02-14T08:00:00Z",
+      "end": "2024-02-14T09:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 5,
+    "fields": {
+      "label": "Body-Percussion",
+      "start": "2024-02-14T09:00:00Z",
+      "end": "2024-02-14T09:30:00Z",
+      "is_global": true,
+      "dependencies": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 6,
+    "fields": {
+      "label": "Mittagessen",
+      "start": "2024-02-14T12:00:00Z",
+      "end": "2024-02-14T13:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 7,
+    "fields": {
+      "label": "Abendessen",
+      "start": "2024-02-14T18:00:00Z",
+      "end": "2024-02-14T18:45:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 8,
+    "fields": {
+      "label": "Fr\u00fchst\u00fcck",
+      "start": "2024-02-15T08:00:00Z",
+      "end": "2024-02-15T09:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 9,
+    "fields": {
+      "label": "Body-Percussion",
+      "start": "2024-02-15T09:00:00Z",
+      "end": "2024-02-15T09:30:00Z",
+      "is_global": true,
+      "dependencies": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 10,
+    "fields": {
+      "label": "Mittagessen",
+      "start": "2024-02-15T12:00:00Z",
+      "end": "2024-02-15T13:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 11,
+    "fields": {
+      "label": "Abendessen",
+      "start": "2024-02-15T18:00:00Z",
+      "end": "2024-02-15T18:45:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 12,
+    "fields": {
+      "label": "Teilnehmerkonzert",
+      "start": "2024-02-15T17:00:00Z",
+      "end": "2024-02-15T18:00:00Z",
+      "is_global": true,
+      "dependencies": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 13,
+    "fields": {
+      "label": "Mittagessen, Abreise",
+      "start": "2024-02-16T12:00:00Z",
+      "end": "2024-02-16T13:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 14,
+    "fields": {
+      "label": "Fr\u00fchst\u00fcck",
+      "start": "2024-02-16T08:00:00Z",
+      "end": "2024-02-16T09:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 15,
+    "fields": {
+      "label": "Body-Percussion",
+      "start": "2024-02-16T09:00:00Z",
+      "end": "2024-02-16T09:30:00Z",
+      "is_global": true,
+      "dependencies": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 16,
+    "fields": {
+      "label": "Begr\u00fc\u00dfung zu Kaffee und Kuchen",
+      "start": "2024-02-13T14:00:00Z",
+      "end": "2024-02-13T15:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 17,
+    "fields": {
+      "label": "Kaffee und Kuchen",
+      "start": "2024-02-14T14:30:00Z",
+      "end": "2024-02-14T15:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 18,
+    "fields": {
+      "label": "Kaffee und Kuchen",
+      "start": "2024-02-15T14:30:00Z",
+      "end": "2024-02-15T15:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 19,
+    "fields": {
+      "label": "Bass-Orchester: Registerproben laut Einteilung",
+      "start": "2024-02-13T17:00:00Z",
+      "end": "2024-02-13T18:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 20,
+    "fields": {
+      "label": "Bass-Orchester",
+      "start": "2024-02-13T19:00:00Z",
+      "end": "2024-02-13T20:30:00Z",
+      "is_global": true,
+      "dependencies": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 22,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T16:00:00Z",
+      "end": "2024-02-13T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        67,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 23,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        69,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 24,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T16:00:00Z",
+      "end": "2024-02-13T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        70,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 25,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T16:00:00Z",
+      "end": "2024-02-13T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        74,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 26,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        75,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 27,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        72,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 28,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T16:00:00Z",
+      "end": "2024-02-13T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        73,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 30,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        66,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 31,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:00:00Z",
+      "end": "2024-02-13T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        37
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 32,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T16:00:00Z",
+      "end": "2024-02-13T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        29
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 33,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T15:30:00Z",
+      "end": "2024-02-13T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        58
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 34,
+    "fields": {
+      "label": "",
+      "start": "2024-02-13T16:30:00Z",
+      "end": "2024-02-13T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        45
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 35,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        71,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 36,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        68,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 37,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:30:00Z",
+      "end": "2024-02-14T11:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        76,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 38,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:00:00Z",
+      "end": "2024-02-14T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        72,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 39,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        73,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 40,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        66,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 41,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:30:00Z",
+      "end": "2024-02-14T11:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        67,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 42,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        70,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 44,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:00:00Z",
+      "end": "2024-02-14T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        71,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 45,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        69,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 46,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        68,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 47,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:00:00Z",
+      "end": "2024-02-14T16:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        74,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 48,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        75,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 49,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        76,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 50,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 51,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 52,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T17:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 53,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 54,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 55,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T17:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 56,
+    "fields": {
+      "label": "Bass-Orchester",
+      "start": "2024-02-14T19:00:00Z",
+      "end": "2024-02-14T20:00:00Z",
+      "is_global": true,
+      "dependencies": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 57,
+    "fields": {
+      "label": "Bass-Orchester: Registerproben laut Einteilung",
+      "start": "2024-02-14T17:15:00Z",
+      "end": "2024-02-14T18:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 58,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        66,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 59,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:30:00Z",
+      "end": "2024-02-15T11:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        67,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 60,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        68,
+        3
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 61,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:30:00Z",
+      "end": "2024-02-15T11:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        74,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 62,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        75,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 63,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        76,
+        4
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 64,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        72,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 65,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:30:00Z",
+      "end": "2024-02-15T11:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        73,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 66,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        70,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 67,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:30:00Z",
+      "end": "2024-02-15T11:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        71,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 68,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        69,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 69,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        24
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 70,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:00:00Z",
+      "end": "2024-02-14T11:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        28
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 71,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:30:00Z",
+      "end": "2024-02-14T11:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        30
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 72,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:30:00Z",
+      "end": "2024-02-14T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        36
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 73,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T10:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        47
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 74,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        48
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 75,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T13:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        49
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 76,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:30:00Z",
+      "end": "2024-02-14T14:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        52
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 77,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T14:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        54
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 78,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:00:00Z",
+      "end": "2024-02-14T10:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        63
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 79,
+    "fields": {
+      "label": "Klavierprobe",
+      "start": "2024-02-14T19:00:00Z",
+      "end": "2024-02-14T19:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        79
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 80,
+    "fields": {
+      "label": "Aufstellung, Stimmen",
+      "start": "2024-02-14T18:45:00Z",
+      "end": "2024-02-14T19:00:00Z",
+      "is_global": true,
+      "dependencies": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 81,
+    "fields": {
+      "label": "Aufstellung, Stimmen",
+      "start": "2024-02-13T18:45:00Z",
+      "end": "2024-02-13T19:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 82,
+    "fields": {
+      "label": "Dozentenkonzert",
+      "start": "2024-02-14T20:45:00Z",
+      "end": "2024-02-14T21:45:00Z",
+      "is_global": true,
+      "dependencies": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 84,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:00:00Z",
+      "end": "2024-02-14T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        37
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 85,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:30:00Z",
+      "end": "2024-02-14T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        58
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 86,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:30:00Z",
+      "end": "2024-02-15T14:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        45
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 87,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:00:00Z",
+      "end": "2024-02-15T11:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        29
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 88,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T10:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        28
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 89,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:00:00Z",
+      "end": "2024-02-15T10:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        30
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 90,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        36
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 91,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T13:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        47
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 92,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:30:00Z",
+      "end": "2024-02-15T14:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        48
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 93,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T14:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        49
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 94,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T14:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        52
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 95,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:30:00Z",
+      "end": "2024-02-15T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        54
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 96,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T16:00:00Z",
+      "end": "2024-02-15T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        63
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 97,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        63
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 98,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T13:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        63
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 99,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:45:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        29
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 100,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:00:00Z",
+      "end": "2024-02-14T15:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        37
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 101,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T15:45:00Z",
+      "end": "2024-02-14T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        45
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 102,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:30:00Z",
+      "end": "2024-02-14T17:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        47
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 103,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:00:00Z",
+      "end": "2024-02-15T11:45:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        48
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 104,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:15:00Z",
+      "end": "2024-02-15T11:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        54
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 105,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T10:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        58
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 106,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:00:00Z",
+      "end": "2024-02-15T09:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        29
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 107,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        37
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 108,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T10:30:00Z",
+      "end": "2024-02-15T11:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        45
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 109,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:00:00Z",
+      "end": "2024-02-15T11:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        47
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 110,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:30:00Z",
+      "end": "2024-02-15T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        48
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 111,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T16:00:00Z",
+      "end": "2024-02-15T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        54
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 112,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T16:30:00Z",
+      "end": "2024-02-15T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        8,
+        58
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 113,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 114,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 115,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        65,
+        6
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 116,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T09:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 117,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 118,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T16:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        64,
+        5
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 119,
+    "fields": {
+      "label": "20. Alteglofsheimer Bass-Gala",
+      "start": "2024-02-16T10:30:00Z",
+      "end": "2024-02-16T11:45:00Z",
+      "is_global": true,
+      "dependencies": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 120,
+    "fields": {
+      "label": "Spielbereit im Saal",
+      "start": "2024-02-16T10:00:00Z",
+      "end": "2024-02-16T10:30:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 121,
+    "fields": {
+      "label": "Einspielzeit",
+      "start": "2024-02-16T09:30:00Z",
+      "end": "2024-02-16T10:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 122,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        27
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 123,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:30:00Z",
+      "end": "2024-02-14T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        36
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 124,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T14:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        44
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 125,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:00:00Z",
+      "end": "2024-02-14T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        59
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 126,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:00:00Z",
+      "end": "2024-02-14T13:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        30
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 127,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:30:00Z",
+      "end": "2024-02-14T11:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        43
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 128,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T13:30:00Z",
+      "end": "2024-02-14T14:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        51
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 129,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:00:00Z",
+      "end": "2024-02-14T11:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        55
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 131,
+    "fields": {
+      "label": "Offene Workshops",
+      "start": "2024-02-15T16:15:00Z",
+      "end": "2024-02-15T17:00:00Z",
+      "is_global": true,
+      "dependencies": []
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 132,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T14:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        22
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 133,
+    "fields": {
+      "label": "Klavierprobe",
+      "start": "2024-02-14T17:00:00Z",
+      "end": "2024-02-14T17:20:00Z",
+      "is_global": false,
+      "dependencies": [
+        7,
+        2
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 134,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T09:30:00Z",
+      "end": "2024-02-14T10:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        28
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 135,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        40
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 136,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:45:00Z",
+      "end": "2024-02-14T17:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        57
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 137,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T14:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        38
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 138,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:30:00Z",
+      "end": "2024-02-14T11:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        50
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 139,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:00:00Z",
+      "end": "2024-02-14T11:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        52
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 140,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        61
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 141,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T13:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        30
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 142,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        43
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 143,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:30:00Z",
+      "end": "2024-02-15T14:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        51
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 144,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T14:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        55
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 145,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T10:00:00Z",
+      "end": "2024-02-14T10:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        22
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 146,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T14:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        28
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 147,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        40
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 148,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:30:00Z",
+      "end": "2024-02-15T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        57
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 149,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        38
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 150,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T14:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        50
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 151,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        52
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 152,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:30:00Z",
+      "end": "2024-02-15T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        2,
+        61
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 153,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        27
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 154,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T14:00:00Z",
+      "end": "2024-02-15T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        36
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 155,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        44
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 156,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:30:00Z",
+      "end": "2024-02-15T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        3,
+        59
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 157,
+    "fields": {
+      "label": "Generalprobe",
+      "start": "2024-02-15T19:00:00Z",
+      "end": "2024-02-15T20:30:00Z",
+      "is_global": true,
+      "dependencies": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 158,
+    "fields": {
+      "label": "Bass-Feierabend mit Verlosung",
+      "start": "2024-02-15T20:30:00Z",
+      "end": "2024-02-15T23:00:00Z",
+      "is_global": true,
+      "dependencies": [
+        77
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 159,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T11:30:00Z",
+      "end": "2024-02-14T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        62
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 160,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:00:00Z",
+      "end": "2024-02-15T15:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        62
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 161,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T13:00:00Z",
+      "end": "2024-02-15T13:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        62
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 162,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T16:45:00Z",
+      "end": "2024-02-14T17:15:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        25
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 163,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T15:30:00Z",
+      "end": "2024-02-15T16:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        1,
+        25
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 164,
+    "fields": {
+      "label": "",
+      "start": "2024-02-14T14:00:00Z",
+      "end": "2024-02-14T14:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        78,
+        1
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 165,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T16:00:00Z",
+      "end": "2024-02-15T16:30:00Z",
+      "is_global": false,
+      "dependencies": [
+        79,
+        24
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 167,
+    "fields": {
+      "label": "- Reserve -",
+      "start": "2024-02-15T16:30:00Z",
+      "end": "2024-02-15T17:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        79
+      ]
+    }
+  },
+  {
+    "model": "resources.event",
+    "pk": 168,
+    "fields": {
+      "label": "",
+      "start": "2024-02-15T11:30:00Z",
+      "end": "2024-02-15T12:00:00Z",
+      "is_global": false,
+      "dependencies": [
+        4,
+        42
+      ]
+    }
+  },
+  {
+    "model": "resources.project",
+    "pk": 1,
+    "fields": {
+      "label": "Bavarian Bass Camp 2024",
+      "start_date": "2024-02-13",
+      "end_date": "2024-02-16"
+    }
+  }
+]

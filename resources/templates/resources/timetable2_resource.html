@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Timetable</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .first_row {
+            padding: 8px !important;
+        }
+
+        .resources-timetable th, .resources-timetable td {
+            border: 1px solid #ddd;
+            padding: 0;
+            text-align: left;
+        }
+
+
+        .event-time {
+            padding: 8px;
+        }
+
+        .event-container {
+            position: relative;
+        }
+
+        .event-box {
+            background-color: rgba(18, 78, 127, 0.28);
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .event-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+{% include "output-banner.html" %}
+
+<h2 class="resource resource-{{ resource.role|lower }}">{{ resource.label }}</h2>
+
+<div class="resource-descendants">
+    {% for res in descendants %}
+        {% if res.id != resource.id %}
+            <div class="resource resource-{{ res.role|lower }}">{{ res.label }}</div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% if resource.description %}
+    <div class="resource resource-description">
+        {{ resource.description }}
+    </div>
+{% endif %}
+
+<div class="timetable">
+    <table class="resources-timetable">
+        <thead>
+        <tr>
+            <th class="first_row">Time</th>
+            {% for day in events_by_day %}
+                <th class="first_row">{{ day.date|date:"l" }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for timeslot in events_by_timeslot %}
+            <tr>
+                <td class="col-event-time">
+                    <div class="event-time">{{ timeslot.timeslot.str }}</div>
+                </td>
+                {% for day in timeslot.days %}
+                    {# <td class="col-event-details">#}
+                    <td class="col-event-details" !rowspan={{ day.event.colspan }}>
+                        <div class="event-container">
+                            <div class="event-box">
+                                <div class="event-label">{{ day.event.label }}</div>
+                            </div>
+                        </div>
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% include "sponsors.html" %}
+
+</body>
+</html>
