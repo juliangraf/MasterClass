@@ -1,16 +1,18 @@
 {% extends "resources/base_output.html" %}
 
 {% block content %}
-  {% regroup resource_list by role as roles %}
+    {% regroup resource_list by role as roles %}
 
-  <h1>Stundenpl&auml;ne</h1>
-  {% for role in roles %}
-    <h2>{{ role.grouper.plural_label }}</h2>
-    <ul>
-      {% for resource in role.list %}
-        <li><a href="{% url 'timetable' resource.id %}">{{ resource.label }}</a></li>
-      {% endfor %}
-    </ul>
-    <a href="{% url 'timetable-all' role.grouper.id %}">Alle {{ role.grouper.plural_label }}</a>
-  {% endfor %}
+    <h1 style="font-size: xx-large;">Übersicht</h1>
+    {% for role in roles %}
+        <h2>{{ role.grouper.plural_label }}</h2>
+        <ul>
+            {% for resource in role.list %}
+                <li><a href="{% url 'timetable' resource.id %}">{{ resource.label }}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'timetable-all' role.grouper.id %}">Alle {{ role.grouper.plural_label }}</a>
+        <br>
+        <a href="{% url 'add-resource' role.grouper.id %}">{{ role.grouper.label }} hinzufügen</a>
+    {% endfor %}
 {% endblock %}
