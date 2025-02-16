@@ -1,0 +1,122 @@
+{% extends "resources/base.html" %}
+
+{% block content %}
+    <style>
+        .container {
+            max-width: 600px;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Styling for Multi-Select as Checkboxes */
+        .checkbox-group {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 150px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+            cursor: pointer;
+        }
+
+        .checkbox-item input {
+            width: 16px;
+            height: 16px;
+            accent-color: #007bff;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 32%;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Neues Event hinzufügen</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="{{ form.label.id_for_label }}">Bezeichnung</label>
+            {{ form.label }}
+
+            <label for="{{ form.start.id_for_label }}">Beginn</label>
+            {{ form.start }}
+
+            <label for="{{ form.end.id_for_label }}">Ende</label>
+            {{ form.end }}
+
+            <label for="{{ form.is_global.id_for_label }}">Veranstaltung für alle?</label>
+            {{ form.is_global }}
+
+            <label>Benötigt</label>
+            <div class="checkbox-group">
+                {% for resource in form.dependencies.field.queryset %}
+                    <div class="checkbox-item">
+                        <label>
+                            <input type="checkbox" name="{{ form.dependencies.name }}" value="{{ resource.id }}"
+                                   {% if resource in form.dependencies.value %}checked{% endif %}>
+                        </label>
+                        <span>{{ resource.label }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="button-container">
+                <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Zurück</a>
+                <button type="submit" class="btn btn-primary">Event speichern</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

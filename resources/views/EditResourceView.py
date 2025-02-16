@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse
 
 from resources.froms import ResourceForm
 from resources.models import Resource
@@ -14,8 +13,10 @@ def update_resource(request, resource_id):
             resource = form.save(commit=False)  # Speichert noch nicht in die DB
             resource.save()  # Speichert das Objekt in die DB, aber ohne ManyToMany-Felder
             form.save_m2m()  # Speichert die ManyToMany-Beziehungen
-            return redirect(reverse('timetable-index', args=[]))  # Stelle sicher, dass diese URL existiert
+            referer = request.session.get('referer', 'timetable-index')  # Use session variable for referer
+            return redirect(referer)
     else:
+        request.session['referer'] = request.META.get('HTTP_REFERER', 'event-list')  # Store referer in session
         form = ResourceForm(instance=resource)  # Bestehende Werte setzen
 
     return render(request, 'resources/edit_resource.html', {'form': form, 'resource': resource})

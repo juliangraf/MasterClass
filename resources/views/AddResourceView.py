@@ -1,6 +1,4 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse
 from django.views.generic import FormView
 
 from resources.froms import ResourceForm
@@ -16,10 +14,10 @@ def add_resource(request, role_id):
             resource = form.save(commit=False)
             resource.role = role
             resource.save()
-
-            # Redirect to a specific page, for example, the timetable view
-            return HttpResponseRedirect(reverse('timetable-all', args=[role.id]))
+            referer = request.session.get('referer', 'timetable-index')  # Use session variable for referer
+            return redirect(referer)
     else:
+        request.session['referer'] = request.META.get('HTTP_REFERER', 'event-list')  # Store referer in session
         form = ResourceForm()
 
     return render(request, 'resources/add_resource.html', {'form': form, 'role': role})

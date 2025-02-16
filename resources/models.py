@@ -12,6 +12,7 @@ class Role(models.Model):
     def __str__(self):
         return self.label
 
+
 class Resource(models.Model):
     label = models.CharField(max_length=127)
     description = models.TextField(blank=True)
@@ -19,7 +20,7 @@ class Resource(models.Model):
     dependencies = models.ManyToManyField("self", symmetrical=False, blank=True)
 
     class Meta:
-        ordering = ["role","label"]
+        ordering = ["role", "label"]
 
     def __str__(self):
         return self.label
@@ -40,7 +41,7 @@ class Resource(models.Model):
                 WHERE d.to_resource_id=parent.id \
             ) \
             SELECT id FROM resources_resource AS res WHERE res.id IN parent;',
-            [self.id] )]
+            [self.id])]
 
     def descendants(self):
         return list(Resource.objects.raw(
@@ -51,7 +52,7 @@ class Resource(models.Model):
                 WHERE d.from_resource_id=child.id \
             ) \
             SELECT id FROM resources_resource AS res WHERE res.id IN child;',
-            [self.id] ))
+            [self.id]))
 
 
 class Event(models.Model):
@@ -84,7 +85,6 @@ class Event(models.Model):
 
         return '%s-%s: %s' % (start, end, res)
 
-
     def find_conflicts(self):
         conflicts = set()
         related_self = set()
@@ -99,7 +99,6 @@ class Event(models.Model):
             conflicts |= (related_self & related_other)
 
         return conflicts
-
 
 
 class Project(models.Model):

@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.db.models import Count
 from django.http import HttpResponseRedirect
-from django.template.response import TemplateResponse
-from django.urls import reverse, path
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 from .models import *
@@ -31,19 +30,6 @@ class ResourceAdmin(admin.ModelAdmin):
 
     # Optional: Add search functionality to make finding resources easier
     search_fields = ('label', 'description')
-
-    def get_urls(self):
-        urls = super().get_urls()
-        my_urls = [
-            path('lorem/', self.admin_site.admin_view(self.test_view))
-        ]
-        return my_urls + urls
-
-    def test_view(self, request):
-        context = dict(
-            self.admin_site.each_context(request),
-        )
-        return TemplateResponse(request, "resources/lorem.html", context)
 
 
 class DependencyCountFilter(admin.SimpleListFilter):
