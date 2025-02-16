@@ -4,7 +4,7 @@ from .views import *
 from .views.AddResourceView import AddResourceView
 
 urlpatterns = [
-    path('', TimetableIndex.as_view(), name='timetable-index'),
+    path('', TimetableIndex.as_view(), name='timetable-home'),
     path('timetable/', TimetableIndex.as_view(), name='timetable-index'),
     path('timetable/<int:resource>', Timetable.as_view(), name='timetable'),
     path('timetable/role/<int:role>', Timetable.as_view(), name='timetable-all'),
