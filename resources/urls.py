@@ -9,7 +9,7 @@ urlpatterns = [
     path('timetable/<int:resource>', Timetable.as_view(), name='timetable'),
     path('timetable/role/<int:role>', Timetable.as_view(), name='timetable-all'),
     path('calendar/<int:role>', CalendarView.as_view(), name='calendar'),
-    path('conflicts/<int:resource>', ConflictList.as_view()),
+    path('conflicts/', ConflictList.as_view(), name='conflicts'),
     path('add/<int:role>/', AddResourceView.as_view(), name='add-resource'),
 
     path('resource/<int:pk>', ResourceView.as_view(), name="resource"),

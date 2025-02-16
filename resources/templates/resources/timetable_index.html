@@ -4,8 +4,9 @@
     {% regroup resource_list by role as roles %}
 
     <h1 style="font-size: xx-large;">Übersicht</h1>
+    <h3><b><a href="{% url 'conflicts' %}">Konflikte</a></b></h3>
     {% for role in roles %}
-        <h2>{{ role.grouper.plural_label }}</h2>
+        <h2>{{ role.grouper.plural_label }} (<a href="{% url 'calendar' role.grouper.id %}">Stundenplan</a>)</h2>
         <ul>
             {% for resource in role.list %}
                 <li><a href="{% url 'timetable' resource.id %}">{{ resource.label }}</a></li>

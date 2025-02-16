@@ -1,24 +1,90 @@
 {% extends "resources/base.html" %}
 
 {% block content %}
-{% if conflicts %}
-<h1>Konflikte</h1>
+    <style>
+        /* General table styling */
+        table.conflicts {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
 
-<table class="conflicts">
-  <tbody>
-    {% for conflict in conflicts %}
-    <tr>
-      <td class="conflict conflict-resource">{{ conflict.resource }}</td>
-      <td class="conflict conflict-date">{{ conflict.first_event.start|date }}</td>
-      <td class="conflict conflict-event">
-        {{ conflict.first_event.start|time }}&ndash;{{ conflict.first_event.end|time }}
-      </td>
-      <td class="conflict conflict-event">
-        {{ conflict.second_event.start|time }}&ndash;{{ conflict.second_event.end|time }}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% endif %}
+        table.conflicts th, table.conflicts td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table.conflicts th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+        }
+
+        table.conflicts td {
+            background-color: #fff;
+        }
+
+        table.conflicts tr:nth-child(even) td {
+            background-color: #f9f9f9; /* Zebra striping for easier reading */
+        }
+
+        table.conflicts tr:hover td {
+            background-color: #f1f1f1; /* Highlight row on hover */
+        }
+
+        /* Resource column style */
+        .conflict-resource {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Date and event times styling */
+        .conflict-date,
+        .conflict-event {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .conflict-event {
+        }
+
+        /* Add some spacing between the table and surrounding content */
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+    <a href="/">Zurück</a>
+    {% if conflicts %}
+        <h1>Konflikte</h1>
+
+        <table class="conflicts">
+            <thead>
+            <tr>
+                <th>Konflikt</th>
+                <th>Erster Termin</th>
+                <th>Zweiter Termin</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for conflict in conflicts %}
+                <tr>
+                    <td class="conflict conflict-resource">{{ conflict.resource }}</td>
+                    <td class="conflict conflict-event">{{ conflict.first_event }}</td>
+                    <td class="conflict conflict-event">{{ conflict.second_event }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Es gibt keine Konflikte.</p>
+    {% endif %}
 {% endblock %}
