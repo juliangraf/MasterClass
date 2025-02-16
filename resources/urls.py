@@ -2,6 +2,7 @@ from django.urls import path
 
 from .views import *
 from .views.AddResourceView import AddResourceView
+from .views.EditResourceView import delete_resource, update_resource
 
 urlpatterns = [
     path('', TimetableIndex.as_view(), name='timetable-home'),
@@ -11,6 +12,8 @@ urlpatterns = [
     path('calendar/<int:role>', CalendarView.as_view(), name='calendar'),
     path('conflicts/', ConflictList.as_view(), name='conflicts'),
     path('add/<int:role>/', AddResourceView.as_view(), name='add-resource'),
+    path('edit/<int:resource_id>/', update_resource, name='update-resource'),
+    path('resources/delete/<int:resource_id>/', delete_resource, name='delete-resource'),
 
     path('resource/<int:pk>', ResourceView.as_view(), name="resource"),
     path('resource/<int:pk>/dependency/<int:dependency>', ResourceDependenciesView.as_view(),

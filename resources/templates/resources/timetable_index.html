@@ -9,7 +9,10 @@
         <h2>{{ role.grouper.plural_label }} (<a href="{% url 'calendar' role.grouper.id %}">Stundenplan</a>)</h2>
         <ul>
             {% for resource in role.list %}
-                <li><a href="{% url 'timetable' resource.id %}">{{ resource.label }}</a></li>
+                <li>
+                    <a href="{% url 'timetable' resource.id %}">{{ resource.label }}</a>
+                    <a href="{% url 'update-resource' resource.id %}"> (bearbeiten)</a>
+                </li>
             {% endfor %}
         </ul>
         <a href="{% url 'timetable-all' role.grouper.id %}">Alle {{ role.grouper.plural_label }}</a>

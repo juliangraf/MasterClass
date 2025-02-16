@@ -74,7 +74,7 @@ class DependencyCountFilter(admin.SimpleListFilter):
 class EventAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'is_global', 'get_dependency_count', 'dependency_labels')
     list_filter = ('is_global', DependencyCountFilter)
-    search_fields = ('__str__',)
+    search_fields = ('label',)
 
     # Use filter_horizontal for dependencies to make selection easier
     filter_horizontal = ('dependencies',)

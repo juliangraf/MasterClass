@@ -44,7 +44,6 @@
             min-height: 80px;
         }
 
-        /* Styling for Multi-Select as Checkboxes */
         .checkbox-group {
             background: white;
             padding: 10px;
@@ -60,7 +59,7 @@
         .checkbox-item {
             display: flex;
             align-items: center;
-            gap: 0px;
+            gap: 0;
             cursor: pointer;
         }
 
@@ -75,12 +74,14 @@
             justify-content: space-between;
             margin-top: 20px;
         }
+
+
     </style>
 
     <div class="container">
-        <h2>{{ role }} erstellen</h2>
+        <h2>Ressource bearbeiten</h2>
 
-        <form method="post">
+        <form method="post" action="{% url 'update-resource' resource.id %}">
             {% csrf_token %}
 
             <label for="{{ form.label.id_for_label }}">Bezeichnung</label>
@@ -95,19 +96,20 @@
                     <div class="checkbox-item">
                         <label>
                             <input type="checkbox" name="{{ form.dependencies.name }}" value="{{ dependency.id }}"
-                                   {% if dependency in form.dependencies.value %}checked{% endif %}>
+                                   {% if dependency in form.initial.dependencies %}checked{% endif %}>
                         </label>
                         <span>{{ dependency.label }}</span>
                     </div>
                 {% endfor %}
             </div>
-
             <div class="button-container">
                 <a href="/" class="btn btn-secondary">Zurück</a>
+                <a href="{% url 'delete-resource' resource.id %}" class="btn btn-danger">Löschen</a>
                 <button type="submit" class="btn btn-primary">Speichern</button>
             </div>
         </form>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const labelInput = document.getElementById("{{ form.label.id_for_label }}");
