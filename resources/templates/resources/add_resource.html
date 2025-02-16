@@ -1,0 +1,144 @@
+{% extends "resources/base.html" %}
+
+{% block content %}
+    <style>
+        .container {
+            max-width: 600px;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Styling for Multi-Select as Checkboxes */
+        .checkbox-group {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 150px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+            cursor: pointer;
+        }
+
+        .checkbox-item input {
+            width: 16px;
+            height: 16px;
+            accent-color: #007bff;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+            text-decoration: none;
+            width: 48%;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+            border: none;
+            margin-left: 5px;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #333 !important;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .btn-secondary:hover {
+            background: #ddd;
+        }
+    </style>
+
+    <div class="container">
+        <h2>{{ role }} erstellen</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="{{ form.label.id_for_label }}">Bezeichnung</label>
+            {{ form.label }}
+
+            <label for="{{ form.description.id_for_label }}">Beschreibung</label>
+            {{ form.description }}
+
+            <label>Benötigt</label>
+            <div class="checkbox-group">
+                {% for dependency in form.dependencies.field.queryset %}
+                    <div class="checkbox-item">
+                        <label>
+                            <input type="checkbox" name="{{ form.dependencies.name }}" value="{{ dependency.id }}"
+                                   {% if dependency in form.dependencies.value %}checked{% endif %}>
+                        </label>
+                        <span>{{ dependency.label }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="button-container">
+                <a href="/" class="btn btn-secondary">Zurück</a>
+                <button type="submit" class="btn btn-primary">Speichern</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
