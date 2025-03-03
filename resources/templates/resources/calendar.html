@@ -184,6 +184,10 @@
 {% endblock %}
 
 {% block content %}
+    <a href="{% url "add-event" %}" class="btn btn-primary"
+       style="float: right; margin-top: 20px; width: auto; color: white">
+        Termin hinzufügen
+    </a>
     <div id="maincontent">
         <a href="/"><img class="logo" src="{% static "img/basscamp-header-2025.svg" %}" alt="Logo" width="600"></a>
 
@@ -206,8 +210,4 @@
             <div id="calendar"></div>
         </form>
     </div>
-    <a href="{% url "add-event" %}" class="btn btn-primary"
-       style="float: right; margin-top: 20px; width: auto; color: white">
-        Termin hinzufügen
-    </a>
 {% endblock %}
