@@ -185,8 +185,8 @@
 
 {% block content %}
     <div id="maincontent">
-        <a href="/"><img class="logo" src="{% static "img/logo.svg" %}" alt="Logo" width="600"></a>
-    
+        <a href="/"><img class="logo" src="{% static "img/basscamp-header-2025.svg" %}" alt="Logo" width="600"></a>
+
         <div class="toolbar">
             {% for role in roles %}
                 <a class="ui-button" href="{% url 'calendar' role=role.id %}">{{ role.plural_label }}</a>
