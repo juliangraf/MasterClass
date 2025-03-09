@@ -32,3 +32,16 @@ In Stichpunkten:
 Das Projekt ist noch nicht in einem Zustand, in dem es für die Allgemeinheit nutzbar ist. Die Nutzung setzt derzeit Erfahrung in der Software-Entwicklung mit Python voraus.
 
 Ich arbeite ehrenamtlich an dem Projekt und bin bestrebt, es der Allgemeinheit zugänglich zu machen. Versprechungen kann ich leider keine geben.
+
+## Todos
+
+- [ ] Sortieren nach Namen
+- [ ] Events löschen
+- [ ] Events auf nicht global setzen
+- [ ] Dependencies besser auswählen, richtig füllen bei bearbeiten
+- [ ] Bei Event erstellen global option erlauben
+- [ ] Bei Event erstellen Datum schonmal richtig eintragen
+- [ ] Bei Druck enger -> Papier sparen
+- [ ] Bei Druck auch Einzelstunden dick
+- [ ] Bei Kalender auch nach Ensembles
+- [ ] Bei Kalender Ansicht Dozenten auch Ensembles der Dozenten anzeigen
