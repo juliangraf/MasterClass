@@ -33,6 +33,13 @@ Das Projekt ist noch nicht in einem Zustand, in dem es für die Allgemeinheit nu
 
 Ich arbeite ehrenamtlich an dem Projekt und bin bestrebt, es der Allgemeinheit zugänglich zu machen. Versprechungen kann ich leider keine geben.
 
+## Deploy
+
+Build exe using
+```cmd
+pyinstaller masterclass.spec
+```
+
 ## Todos
 
 - [ ] Sortieren nach Namen
