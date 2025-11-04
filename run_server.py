@@ -148,12 +148,19 @@ def main():
     wait_for_port("127.0.0.1", 8000)
 
     # Jetzt das Webview-Fenster im Hauptthread starten
+    window_width = round(screen_width * 0.9)
+    window_height = round(screen_height * 0.9)
+    # Calculate top-left coordinates to center
+    x = (screen_width - window_width) // 2
+    y = (screen_height - window_height) // 2
     webview.create_window(
         "Masterclass",
         "http://127.0.0.1:8000/",
-        width=screen_width,
-        height=screen_height,
+        width=window_width,
+        height=window_height,
         resizable=True,
+        x=x,
+        y=y
     )
     icon_path = os.path.join(base, "img/icon.png")
 

@@ -7,10 +7,6 @@ body {
     margin: 20mm;
 }
 
-a, a:visited {
-    color: #173;
-}
-
 #sidebar {
     position: fixed;
     left: 0;

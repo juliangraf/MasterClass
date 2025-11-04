@@ -1,22 +1,234 @@
 {% extends "resources/base_output.html" %}
 
+{% block head %}
+    <style>
+        :root {
+          --bg: #f9fafb;
+          --card: #ffffff;
+          --primary: #2563eb;
+          --text: #111827;
+          --border: #e5e7eb;
+          --radius: 12px;
+        }
+
+        body {
+          font-family: "Inter", sans-serif;
+          background: var(--bg);
+          color: var(--text);
+          margin: 0;
+          padding: 2rem;
+        }
+
+        .container {
+          max-width: 850px;
+          margin: auto;
+        }
+
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2rem;
+        }
+
+        header h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          color: var(--primary);
+        }
+
+        .category {
+          background: var(--card);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+          transition: 0.2s;
+        }
+
+        .category:hover {
+          transform: translateY(-2px);
+          box-shadow: 2px 5px 12px rgba(0,0,0,0.7);
+        }
+
+        .category-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          padding-right: 1em;
+        }
+
+        .category-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .actions button {
+            background: none;
+            border: 1px solid transparent;
+            color: var(--primary);
+            cursor: pointer;
+            margin-left: 0.3rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .actions button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        ul.items {
+          list-style: none;
+          margin: 1rem 0 0 0;
+          padding: 0;
+        }
+
+        ul.items li {
+          background: #f3f4f6;
+          border-radius: 8px;
+          padding: 0.5rem 0.75rem;
+          margin-bottom: 0.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: all 0.2s ease;
+        }
+
+        ul.items li:hover {
+          background: #e0e7ff; /* light blue accent */
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .add-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: var(--primary);
+          font-weight: 500;
+          border: 1px dashed var(--primary);
+          padding: 0.45rem 0.9rem;
+          border-radius: var(--radius);
+          cursor: pointer;
+          background: #f8fafc;
+          transition: all 0.2s ease;
+        }
+
+        .add-btn:hover {
+          background: var(--primary);
+          color: white;
+          border-color: var(--primary);
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+          stroke-width: 2px;
+        }
+
+       .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.45rem 0.9rem;
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+            border: 1px solid var(--primary);
+            background: #f8fafc;
+       }
+
+       .action-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+       }
+
+        .header-actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+        }
+
+        .header-actions h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          color: var(--primary);
+          margin: 0;
+        }
+
+        .header-actions .buttons a {
+          margin-left: 0.75rem;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
     {% regroup resource_list by role as roles %}
+    <div class="container">
+    <div class="header-actions">
+        <h1>Ressourcen</h1>
+        <div class="buttons">
+            <a href="{% url 'conflicts' %}" class="action-btn"><i data-lucide="zap"></i>Konflikte ansehen</a>
+            <a href="TODO" class="action-btn"><i data-lucide="settings"></i>Projekteinstellungen</a>
+        </div>
+    </div>
 
-    <h1 style="font-size: xx-large;">Übersicht</h1>
-    <h3><b><a href="{% url 'conflicts' %}">Konflikte</a></b></h3>
     {% for role in roles %}
-        <h2>{{ role.grouper.plural_label }} (<a href="{% url 'calendar' role.grouper.id %}">Stundenplan</a>)</h2>
-        <ul>
+        <div class="category">
+            <div class="category-header">
+                <span class="category-title">{{ role.grouper.plural_label }}</span>
+                <div class="actions">
+                    <a href="{% url 'calendar' role.grouper.id %}"><button><i data-lucide="calendar"></i>Stundenplan</button></a>
+                    <a href="{% url 'timetable-all' role.grouper.id %}"><button><i data-lucide="printer"></i>Plan</button></a>
+                    <button><i data-lucide="pencil"></i>Bearbeiten</button>
+                    <button><i data-lucide="trash-2"></i>Löschen</button>
+                </div>
+            </div>
+            <ul class="items">
             {% for resource in role.list %}
                 <li>
-                    <a href="{% url 'timetable' resource.id %}">{{ resource.label }}</a>
-                    <a href="{% url 'update-resource' resource.id %}"> (bearbeiten)</a>
+                    <span>{{ resource.label }}</span>
+                    <div class="actions">
+                        <a href="{% url 'timetable' resource.id %}"><button><i data-lucide="printer"></i>Plan</button></a>
+                        <a href="{% url 'update-resource' resource.id %}"><button><i data-lucide="pencil"></i>Bearbeiten</button></a>
+                        <a href="TODO"><button><i data-lucide="trash-2"></i>Löschen</button></a>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
-        <a href="{% url 'timetable-all' role.grouper.id %}">Alle {{ role.grouper.plural_label }}</a>
-        <br>
-        <a href="{% url 'add-resource' role.grouper.id %}">{{ role.grouper.label }} hinzufügen</a>
+            <a href="{% url 'add-resource' role.grouper.id %}">
+                <div class="add-btn"><i data-lucide="plus"></i>{{ role.grouper.label }} hinzufügen</div>
+            </a>
+
+        </div>
     {% endfor %}
+    <a href="TODO" class="add-btn"><i data-lucide="folder-plus"></i>Neue Rolle hinzufügen</a>
+    </div>
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
 {% endblock %}

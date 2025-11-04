@@ -2,75 +2,106 @@
 
 {% block content %}
     <style>
-        /* General table styling */
         table.conflicts {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-family: Arial, sans-serif;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px 0;
+        font-family: "Inter", sans-serif;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         table.conflicts th, table.conflicts td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
         }
 
         table.conflicts th {
-            background-color: #f4f4f4;
-            color: #333;
-            font-weight: bold;
+        background-color: var(--primary);
+        color: white;
+        font-weight: 600;
         }
 
         table.conflicts td {
-            background-color: #fff;
+        background-color: #fff;
+        transition: background 0.2s, color 0.2s;
         }
 
         table.conflicts tr:nth-child(even) td {
-            background-color: #f9f9f9; /* Zebra striping for easier reading */
+        background-color: #f3f4f6; /* lighter stripe */
         }
 
         table.conflicts tr:hover td {
-            background-color: #f1f1f1; /* Highlight row on hover */
+        background-color: var(--primary);
+        color: white; /* strong hover effect */
         }
 
-        /* Resource column style */
         .conflict-resource {
-            font-weight: bold;
-            color: #333;
+        font-weight: 600;
+        color: #111827;
         }
 
-        /* Date and event times styling */
         .conflict-date,
         .conflict-event {
-            font-size: 14px;
-            color: #555;
+        font-size: 14px;
+        color: #555;
         }
 
-        .conflict-event {
-        }
-
-        /* Add some spacing between the table and surrounding content */
         h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
+        font-size: 28px;
+        color: var(--primary);
+        margin-bottom: 20px;
         }
 
         p {
-            font-size: 16px;
-            color: #666;
+        font-size: 16px;
+        color: #555;
+        }
+
+
+
+        :root {
+        --primary: #2563eb;
+        --radius: 12px;
+        }
+        .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: var(--primary);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        transition: all 0.2s ease;
+        border: 1px solid var(--primary);
+        background: #f8fafc;
+        }
+
+        .back-btn:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+        }
+        svg {
+        width: 18px;
+        height: 18px;
+        stroke-width: 2px;
         }
     </style>
-    <a href="/">Zurück</a>
+    <a href="/" class="back-btn"><i data-lucide="corner-up-left"></i>Zurück</a>
+
     {% if conflicts %}
         <h1>Konflikte</h1>
 
         <table class="conflicts">
             <thead>
             <tr>
-                <th>Konflikt</th>
-                <th>Erster Termin</th>
+                <th>Konflikt bei</th>
+                <th>Erster Termin überschneidet sich mit</th>
                 <th>Zweiter Termin</th>
             </tr>
             </thead>
@@ -87,4 +118,10 @@
     {% else %}
         <p>Es gibt keine Konflikte.</p>
     {% endif %}
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 {% endblock %}
