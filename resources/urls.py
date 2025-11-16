@@ -1,10 +1,13 @@
 from django.urls import path
 
 from .views import *
+from .views import AddRoleView
 from .views.AddEventView import add_event
 from .views.AddResourceView import AddResourceView
+from .views.AddRoleView import add_role
 from .views.EditEventView import update_event
 from .views.EditResourceView import delete_resource, update_resource
+from .views.EditRoleView import update_role, delete_role
 
 urlpatterns = [
     path('', TimetableIndex.as_view(), name='timetable-home'),
@@ -12,10 +15,14 @@ urlpatterns = [
     path('timetable/<int:resource>', Timetable.as_view(), name='timetable'),
     path('timetable/role/<int:role>', Timetable.as_view(), name='timetable-all'),
     path('calendar/<int:role>', CalendarView.as_view(), name='calendar'),
+    path('calendar/', CalendarView.as_view(), name='calendar'),
     path('conflicts/', ConflictList.as_view(), name='conflicts'),
     path('resources/add/<int:role>/', AddResourceView.as_view(), name='add-resource'),
+    path('role/add', add_role, name='add-role'),
     path('resources/edit/<int:resource_id>/', update_resource, name='update-resource'),
+    path('role/edit/<int:role_id>/', update_role, name='update-role'),
     path('resources/delete/<int:resource_id>/', delete_resource, name='delete-resource'),
+    path('role/delete/<int:role_id>/', delete_role, name='delete-role'),
     path('event/add/', add_event, name='add-event'),
     path('event/edit/<int:event_id>/', update_event, name='update-event'),
 

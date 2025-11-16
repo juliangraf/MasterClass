@@ -25,7 +25,7 @@ class CalendarView(ListView):
         return context
 
     def post(self, request, *args, **kwargs):
-        if (('id' in request.POST) and request.POST['id']):
+        if ('id' in request.POST) and request.POST['id']:
             event = get_object_or_404(Event, pk=request.POST['id'])
 
             if ('start' in request.POST):

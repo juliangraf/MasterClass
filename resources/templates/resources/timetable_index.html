@@ -183,7 +183,6 @@
 {% endblock %}
 
 {% block content %}
-    {% regroup resource_list by role as roles %}
     <div class="container">
     <div class="header-actions">
         <h1>Ressourcen</h1>
@@ -193,36 +192,46 @@
         </div>
     </div>
 
-    {% for role in roles %}
+        {% for role, resources in roles %}
         <div class="category">
             <div class="category-header">
-                <span class="category-title">{{ role.grouper.plural_label }}</span>
+                <span class="category-title">{{ role.plural_label }}</span>
                 <div class="actions">
-                    <a href="{% url 'calendar' role.grouper.id %}"><button><i data-lucide="calendar"></i>Stundenplan</button></a>
-                    <a href="{% url 'timetable-all' role.grouper.id %}"><button><i data-lucide="printer"></i>Plan</button></a>
-                    <button><i data-lucide="pencil"></i>Bearbeiten</button>
-                    <button><i data-lucide="trash-2"></i>Löschen</button>
+                    <a href="{% url 'calendar' role.id %}">
+                        <button><i data-lucide="calendar"></i>Stundenplan</button>
+                    </a>
+                    <a href="{% url 'timetable-all' role.id %}">
+                        <button><i data-lucide="printer"></i>Plan</button>
+                    </a>
+                    <a href="{% url 'update-role' role.id %}">
+                        <button><i data-lucide="pencil"></i>Bearbeiten</button>
+                    </a>
+                    <a href="{% url 'delete-role' role.id %}">
+                        <button><i data-lucide="trash-2"></i>Löschen</button>
+                    </a>
                 </div>
             </div>
             <ul class="items">
-            {% for resource in role.list %}
+                {% for resource in resources %}
                 <li>
                     <span>{{ resource.label }}</span>
                     <div class="actions">
                         <a href="{% url 'timetable' resource.id %}"><button><i data-lucide="printer"></i>Plan</button></a>
                         <a href="{% url 'update-resource' resource.id %}"><button><i data-lucide="pencil"></i>Bearbeiten</button></a>
-                        <a href="TODO"><button><i data-lucide="trash-2"></i>Löschen</button></a>
+                        <a href="{% url 'delete-resource' resource.id %}">
+                            <button><i data-lucide="trash-2"></i>Löschen</button>
+                        </a>
                     </div>
                 </li>
             {% endfor %}
         </ul>
-            <a href="{% url 'add-resource' role.grouper.id %}">
-                <div class="add-btn"><i data-lucide="plus"></i>{{ role.grouper.label }} hinzufügen</div>
+            <a href="{% url 'add-resource' role.id %}">
+                <div class="add-btn"><i data-lucide="plus"></i>{{ role.label }} hinzufügen</div>
             </a>
 
         </div>
     {% endfor %}
-    <a href="TODO" class="add-btn"><i data-lucide="folder-plus"></i>Neue Rolle hinzufügen</a>
+        <a href="{% url 'add-role' %}" class="add-btn"><i data-lucide="folder-plus"></i>Neue Rolle hinzufügen</a>
     </div>
 
     <!-- Lucide icons -->

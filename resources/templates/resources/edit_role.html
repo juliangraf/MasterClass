@@ -81,32 +81,20 @@
     </style>
 
     <div class="container">
-        <h2>Ressource bearbeiten</h2>
+        <h2>Role bearbeiten</h2>
 
-        <form method="post" action="{% url 'update-resource' resource.id %}">
+        <form method="post" action="{% url 'update-role' role.id %}">
             {% csrf_token %}
 
             <label for="{{ form.label.id_for_label }}">Bezeichnung</label>
             {{ form.label }}
 
-            <label for="{{ form.description.id_for_label }}">Beschreibung</label>
-            {{ form.description }}
+            <label for="{{ form.plural_label.id_for_label }}">Bezeichnung im Plural</label>
+            {{ form.plural_label }}
 
-            <label>Benötigt</label>
-            <div class="checkbox-group">
-                {% for dependency in form.dependencies.field.queryset %}
-                    <div class="checkbox-item">
-                        <label>
-                            <input type="checkbox" name="{{ form.dependencies.name }}" value="{{ dependency.id }}"
-                                   {% if dependency in form.initial.dependencies %}checked{% endif %}>
-                        </label>
-                        <span>{{ dependency.label }}</span>
-                    </div>
-                {% endfor %}
-            </div>
             <div class="button-container">
                 <a href="/" class="btn btn-secondary">Zurück</a>
-                <a href="{% url 'delete-resource' resource.id %}" class="btn btn-danger">Löschen</a>
+                <a href="{% url 'delete-role' role.id %}" class="btn btn-danger">Löschen</a>
                 <button type="submit" class="btn btn-primary">Speichern</button>
             </div>
         </form>

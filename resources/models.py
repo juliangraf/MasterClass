@@ -16,7 +16,7 @@ class Role(models.Model):
 class Resource(models.Model):
     label = models.CharField(max_length=127)
     description = models.TextField(blank=True)
-    role = models.ForeignKey(Role, on_delete=models.PROTECT)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
     dependencies = models.ManyToManyField("self", symmetrical=False, blank=True)
 
     class Meta:

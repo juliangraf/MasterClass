@@ -1,9 +1,12 @@
 from django import forms
 
-from .models import Resource, Event
+from .models import Resource, Event, Role
 
 
 class ResourceForm(forms.ModelForm):
+    description = forms.CharField(
+        widget=forms.Textarea(attrs={"rows": 4})
+    )
     dependencies = forms.ModelMultipleChoiceField(queryset=Resource.objects.all(),  # Alle Ressourcen als Auswahl
                                                   widget=forms.CheckboxSelectMultiple,  # Checkboxes für Mehrfachauswahl
                                                   required=False  # Damit keine Auswahl erzwungen wird
@@ -23,3 +26,8 @@ class EventForm(forms.ModelForm):
             'end': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
             'dependencies': forms.CheckboxSelectMultiple,  # Use checkbox for dependencies selection
         }
+class RoleForm(forms.ModelForm):
+    class Meta:
+        model = Role
+        fields = ['label', 'plural_label']
+
