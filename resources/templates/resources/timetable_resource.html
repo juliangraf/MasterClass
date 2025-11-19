@@ -48,5 +48,12 @@
 
 {% endfor %}
 
+<script>
+window.addEventListener("load", () => {
+    window.print();
+    setTimeout(() => {
+        window.history.back();
+    }, 300);
+});
+</script>
 
-{% include "sponsors.html" %}

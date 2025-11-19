@@ -5,6 +5,7 @@ from .models import Resource, Event, Role
 
 class ResourceForm(forms.ModelForm):
     description = forms.CharField(
+        required=False,
         widget=forms.Textarea(attrs={"rows": 4})
     )
     dependencies = forms.ModelMultipleChoiceField(queryset=Resource.objects.all(),  # Alle Ressourcen als Auswahl

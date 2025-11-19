@@ -91,7 +91,12 @@
         height: 18px;
         stroke-width: 2px;
         }
+
+        .main {
+            margin: 0em 3em;
+        }
     </style>
+<div class="main">
     <a href="/" class="back-btn"><i data-lucide="corner-up-left"></i>Zurück</a>
 
     {% if conflicts %}
@@ -101,8 +106,8 @@
             <thead>
             <tr>
                 <th>Konflikt bei</th>
-                <th>Erster Termin überschneidet sich mit</th>
-                <th>Zweiter Termin</th>
+                <th>Termin überschneidet sich</th>
+                <th>mit</th>
             </tr>
             </thead>
             <tbody>
@@ -116,9 +121,9 @@
             </tbody>
         </table>
     {% else %}
-        <p>Es gibt keine Konflikte.</p>
+        <p>Es gibt keine Konflikte <i data-lucide="party-popper"></i></p>
     {% endif %}
-
+</div>
     <!-- Lucide icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>

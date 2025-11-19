@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" media="all" href="{% static "css/style.css" %}">
-    <link rel="stylesheet" media="all" href="{% static "css/print.css" %}">
     <title>{% block title %}Masterclass{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -17,7 +16,7 @@
     <h1 style="font-size: 3rem; font-weight: 700; margin: 0 ; color: #111111;">Masterclass</h1>
 
     <nav style="display: flex; gap: 2rem; justify-content: center;">
-        <a href="{% url 'calendar' %}" class="nav-link {% if active_page == 'timetable' %}active{% endif %}">Stundenplan</a>
+        <a href="" class="nav-link {% if active_page == 'timetable' %}active{% endif %}">Stundenplan</a>
         <a href="{% url 'timetable-home' %}" class="nav-link {% if active_page == 'ressources' %}active{% endif %}">Ressourcen</a>
         <a href="{% url 'conflicts' %}"
            class="nav-link {% if active_page == 'conflicts' %}active{% endif %}">Konflikte</a>

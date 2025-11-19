@@ -237,3 +237,7 @@ li.resource-dependency {
 .btn-danger:hover {
     background: #9a4125;
 }
+
+a {
+        text-decoration: None;
+}

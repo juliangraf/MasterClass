@@ -3,10 +3,19 @@
 {% block title %}Stundenplan{% endblock %}
 
 {% block content %}
-  {% for t in timetables %}
-    {% include 'resources/timetable_resource.html' with resource=t.resource descendants=t.descendants events_by_day=t.events_by_day only %}
-    {% if not forloop.last %}
-      <hr class="page-break">
+    {% if timetables %}
+        {% for t in timetables %}
+            {% include 'resources/timetable_resource.html' with resource=t.resource descendants=t.descendants events_by_day=t.events_by_day only %}
+            {% if not forloop.last %}
+                <hr class="page-break">
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <script>
+            alert("Hier sind keine Stundenpläne vorhanden.");
+            window.history.back();
+        </script>
     {% endif %}
-  {% endfor %}
 {% endblock %}
+
+

@@ -1,8 +1,12 @@
-{% extends "resources/base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="all" href="{% static 'css/print.css' %}">
+    <link rel="stylesheet" media="all" href="{% static "css/style.css" %}">
+    <title>Druckansicht</title>
+</head>
 
-{% block top %}
-{% endblock %}
-
-
-{% block footer %}
-{% endblock %}
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>
