@@ -1,7 +1,8 @@
+from django.conf.urls.static import static
 from django.urls import path
 
+from masterclass import settings
 from .views import *
-from .views import AddRoleView
 from .views.AddEventView import add_event
 from .views.AddResourceView import AddResourceView
 from .views.AddRoleView import add_role
@@ -38,3 +39,6 @@ urlpatterns = [
     path('json/resources/', ResourcesJSON.as_view(), name='resources-json'),
     path('json/conflicts/', ConflictsJSON.as_view(), name='conflicts-json'),
 ]
+
+if not settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

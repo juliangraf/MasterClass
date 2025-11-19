@@ -11,12 +11,25 @@ class CalendarView(ListView):
     context_object_name = 'resources'
 
     def get_queryset(self):
-        primary_role = get_object_or_404(Role, pk=self.kwargs['role'])
-        return Resource.objects.order_by('role').exclude(role=primary_role.id)
+        role_pk = self.kwargs.get('role')
+        if role_pk:
+            primary_role = get_object_or_404(Role, pk=role_pk)
+        else:
+            primary_role = Role.objects.first()
+            if not primary_role:
+                return Resource.objects.none()
+        return Resource.objects.exclude(role=primary_role.id).order_by('role')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['primary_role'] = get_object_or_404(Role, pk=self.kwargs['role'])
+        role_pk = self.kwargs.get('role')
+        if role_pk:
+            primary_role = get_object_or_404(Role, pk=role_pk)
+        else:
+            primary_role = Role.objects.first()
+            if not primary_role:
+                return Resource.objects.none()
+        context['primary_role'] = primary_role
         context['roles'] = Role.objects.all()
         context['project'] = Project.objects.get(pk=1)
         return context

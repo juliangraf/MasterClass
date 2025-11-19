@@ -16,7 +16,7 @@
     <h1 style="font-size: 3rem; font-weight: 700; margin: 0 ; color: #111111;">Masterclass</h1>
 
     <nav style="display: flex; gap: 2rem; justify-content: center;">
-        <a href="" class="nav-link {% if active_page == 'timetable' %}active{% endif %}">Stundenplan</a>
+        <a href="{% url 'calendar' %}" class="nav-link {% if active_page == 'timetable' %}active{% endif %}">Stundenplan</a>
         <a href="{% url 'timetable-home' %}" class="nav-link {% if active_page == 'ressources' %}active{% endif %}">Ressourcen</a>
         <a href="{% url 'conflicts' %}"
            class="nav-link {% if active_page == 'conflicts' %}active{% endif %}">Konflikte</a>
@@ -103,9 +103,8 @@
     </style>
 </header>
 
-<div id="sidebar">
-        {% block sidebar %}{% endblock %}
-    </div>
+{% block sidebar %}{% endblock %}
+
 <div id="content">
     {% block content %}{% endblock %}
 </div>

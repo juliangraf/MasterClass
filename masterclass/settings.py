@@ -25,7 +25,7 @@ os.makedirs(DB_DIR, exist_ok=True)  # Ordner erstellen, falls er fehlt
 SECRET_KEY = 'hda###w+snn0b8h*a3cvu9oo$ion^o9)5kh-i4dk=&5j#q^+tl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
@@ -118,6 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 INTERNAL_IPS = [
     "127.0.0.1",
