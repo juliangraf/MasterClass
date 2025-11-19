@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Resource, Event, Role
+from .models import Resource, Event, Role, Project
 
 
 class ResourceForm(forms.ModelForm):
@@ -27,8 +27,19 @@ class EventForm(forms.ModelForm):
             'end': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
             'dependencies': forms.CheckboxSelectMultiple,  # Use checkbox for dependencies selection
         }
+
 class RoleForm(forms.ModelForm):
     class Meta:
         model = Role
         fields = ['label', 'plural_label']
 
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ["label", "start_date", "end_date"]
+        widgets = {
+            "label": forms.TextInput(attrs={"class": "form-control"}),
+            "start_date": forms.DateInput(attrs={"type": "date-local", "class": "form-control"}),
+            "end_date": forms.DateInput(attrs={"type": "date.local", "class": "form-control"}),
+        }

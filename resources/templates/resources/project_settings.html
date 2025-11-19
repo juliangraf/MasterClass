@@ -1,0 +1,71 @@
+{% extends "resources/base.html" %}
+
+{% block content %}
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background: white;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 48%;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Projekteinstellungen</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="{{ form.label.id_for_label }}">Bezeichnung</label>
+            {{ form.label }}
+
+            <label for="{{ form.start_date.id_for_label }}">Beginn</label>
+            {{ form.start_date }}
+
+            <label for="{{ form.end_date.id_for_label }}">Ende</label>
+            {{ form.end_date }}
+
+            <div class="button-container">
+                <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Zurück</a>
+                <button type="submit" class="btn btn-primary">Projekt speichern</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

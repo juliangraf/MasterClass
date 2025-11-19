@@ -8,6 +8,7 @@ from .views.AddRoleView import add_role
 from .views.EditEventView import update_event
 from .views.EditResourceView import delete_resource, update_resource
 from .views.EditRoleView import update_role, delete_role
+from .views.ProjectSettings import project_settings
 
 urlpatterns = [
     path('', TimetableIndex.as_view(), name='timetable-home'),
@@ -16,6 +17,7 @@ urlpatterns = [
     path('timetable/role/<int:role>', Timetable.as_view(), name='timetable-all'),
     path('calendar/<int:role>', CalendarView.as_view(), name='calendar'),
     path('calendar/', CalendarView.as_view(), name='calendar'),
+    path('calendar-settings/', project_settings, name='calendar-settings'),
     path('conflicts/', ConflictList.as_view(), name='conflicts'),
     path('resources/add/<int:role>/', AddResourceView.as_view(), name='add-resource'),
     path('role/add', add_role, name='add-role'),

@@ -1,5 +1,4 @@
 from django.shortcuts import redirect, render
-
 from resources.froms import EventForm
 
 

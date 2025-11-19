@@ -67,9 +67,9 @@
         }
 
         .checkbox-item input {
-            width: 16px;
-            height: 16px;
-            accent-color: #007bff;
+            margin: 0em 1em;
+            width: 1em;
+            height: 1em;
         }
 
         .button-container {
@@ -98,8 +98,10 @@
             <label for="{{ form.end.id_for_label }}">Ende</label>
             {{ form.end }}
 
+            <div class="checkbox-item">
             <label for="{{ form.is_global.id_for_label }}">Veranstaltung für alle?</label>
             {{ form.is_global }}
+            </div>
 
             <label>Benötigt</label>
             <div class="checkbox-group">
