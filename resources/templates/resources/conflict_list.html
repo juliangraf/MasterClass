@@ -24,18 +24,22 @@
         font-weight: 600;
         }
 
-        table.conflicts td {
-        background-color: #fff;
-        transition: background 0.2s, color 0.2s;
+        table.conflicts tr {
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         table.conflicts tr:nth-child(even) td {
         background-color: #f3f4f6; /* lighter stripe */
         }
 
-        table.conflicts tr:hover td {
-        background-color: var(--primary);
-        color: white; /* strong hover effect */
+        table.conflicts tbody tr:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        table.conflicts tr:hover td{
+            background: #e0e7ff;
         }
 
         .conflict-resource {
@@ -93,7 +97,7 @@
         }
 
         .main {
-            margin: 0em 3em;
+            margin: 0em 4em;
         }
     </style>
 <div class="main">
