@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset='utf-8'/>
     <link rel="stylesheet" media="all" href="{% static "css/style.css" %}">
     <title>{% block title %}Masterclass{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     {% block head %}{% endblock %}
-
 </head>
 
 <body>
@@ -103,7 +103,9 @@
     </style>
 </header>
 
-
+<div id="sidebar">
+        {% block sidebar %}{% endblock %}
+    </div>
 <div id="content">
     {% block content %}{% endblock %}
 </div>

@@ -1,8 +1,7 @@
-{% extends "resources/base_sidebar.html" %}
+{% extends "resources/base.html" %}
 {% load static %}
 
 {% block head %}
-    <meta charset='utf-8'/>
 
     <link href='{% static 'fullcalendar/core/main.css' %}' rel='stylesheet'/>
     <link href='{% static 'fullcalendar/daygrid/main.css' %}' rel='stylesheet'/>
@@ -39,9 +38,7 @@
                 },
                 allDaySlot: false,
                 resources: '{% url 'resources-by-role-json' primary_role.id %}',
-                // resources: '{% static 'resdemo.json' %}',
                 events: '{% url 'events-by-role-json' primary_role.id %}',
-                // events: '{% static 'demo.json' %}',
                 minTime: '08:00',
                 locale: 'de',
                 timeZone: 'UTC',
@@ -184,13 +181,8 @@
 {% endblock %}
 
 {% block content %}
-    <a href="{% url "add-event" %}" class="btn btn-primary"
-       style="float: right; margin-top: 20px; width: auto; color: white; background: #472;">
-        Termin hinzufügen
-    </a>
-    <div id="maincontent">
-        <a href="/"><img class="logo" src="{% static "img/basscamp-header-2025.svg" %}" alt="Logo" width="600"></a>
 
+<div id="maincontent">
         <div class="toolbar">
             {% for role in roles %}
                 <a class="ui-button" href="{% url 'calendar' role=role.id %}">{{ role.plural_label }}</a>
@@ -204,6 +196,10 @@
             </select>
             <label for="show_globals">Globale Ereignisse</label>
             <input type="checkbox" name="show_globals" checked="checked"/>
+            <a href="{% url 'add-event' %}" class="btn btn-primary"
+               style="margin-top: 20px; width: auto; color: white; background: #472;">
+                Termin hinzufügen
+            </a>
         </div>
         <form method="post">
             {% csrf_token %}

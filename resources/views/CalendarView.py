@@ -1,11 +1,8 @@
-from django.views.generic import *
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-from django.db.models.functions import Trunc, Lag
-from django.db.models import DateTimeField, ExpressionWrapper, fields, Window, F, Q
-from resources.models import *
-from datetime import timedelta
+from django.views.generic import *
 
+from resources.models import *
 
 
 class CalendarView(ListView):
