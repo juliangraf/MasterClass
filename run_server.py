@@ -5,9 +5,11 @@ import threading
 import time
 import tkinter as tk
 from datetime import timedelta, timezone
+from tkinter import filedialog
 
 import django
 import webview
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management import call_command
 from django.db import connections
@@ -90,19 +92,100 @@ def populate_test_data():
     e3.dependencies.add(student_lisa, student_max, student_emma, room_101)
 
 
+def choose_or_create_project() -> tuple[str, bool]:
+    """
+    Shows a dialog asking whether the user wants to open an existing
+    project (SQLite database) or create a new project.
+
+    Returns:
+        (database_path, created_new)
+    """
+    root = tk.Tk()
+    root.title("Projekt auswählen")
+    root.resizable(False, False)
+    root.configure(padx=16, pady=14)
+
+    result: dict[str, object] = {"choice": None}
+
+    title = tk.Label(root, text="Projekt auswählen", font=("Segoe UI", 12, "bold"))
+    title.grid(row=0, column=0, columnspan=2, sticky="w")
+
+    text = tk.Label(
+        root,
+        text=(
+            "Möchten Sie ein bestehendes Projekt öffnen\n"
+            "oder ein neues Projekt anlegen?"
+        ),
+        justify="left",
+    )
+    text.grid(row=1, column=0, columnspan=2, sticky="w", pady=(6, 12))
+
+    def open_project() -> None:
+        result["choice"] = "open"
+        root.destroy()
+
+    def create_project() -> None:
+        result["choice"] = "new"
+        root.destroy()
+
+    btn_open = tk.Button(root, text="Projekt öffnen", width=24, command=open_project)
+    btn_new = tk.Button(root, text="Neues Projekt anlegen", width=24, command=create_project)
+    btn_open.grid(row=2, column=0, padx=(0, 10))
+    btn_new.grid(row=2, column=1)
+
+    root.update_idletasks()
+    w, h = 420, 170
+    x = (root.winfo_screenwidth() - w) // 2
+    y = (root.winfo_screenheight() - h) // 2
+    root.geometry(f"{w}x{h}+{x}+{y}")
+
+    root.mainloop()
+
+    choice = result["choice"]
+    if choice is None:
+        raise RuntimeError("Abgebrochen: Es wurde keine Auswahl getroffen.")
+
+    if choice == "open":
+        path = filedialog.askopenfilename(
+            title="Projekt öffnen",
+            filetypes=[("Projekt (SQLite)", "*.sqlite3"), ("Alle Dateien", "*.*")],
+        )
+        if not path:
+            raise RuntimeError("Abgebrochen: Es wurde kein Projekt ausgewählt.")
+        return os.path.abspath(path), False
+
+    path = filedialog.asksaveasfilename(
+        title="Neues Projekt anlegen",
+        defaultextension=".sqlite3",
+        filetypes=[("Projekt (SQLite)", "*.sqlite3")],
+    )
+    if not path:
+        raise RuntimeError("Abgebrochen: Es wurde kein Speicherort ausgewählt.")
+    return os.path.abspath(path), True
+
+
 def ensure_database_ready():
-    """Erstellt oder aktualisiert die Datenbank."""
-    db_conn = connections['default']
+    """Selects or creates the project database and runs migrations."""
+    db_path, created_new = choose_or_create_project()
+
+    # Must be set BEFORE django.setup()
+    settings.DATABASES["default"]["NAME"] = db_path
+
+    django.setup()
+
+    db_conn = connections["default"]
     try:
         db_conn.cursor()
     except OperationalError:
-        print("Datenbank wird erstellt ...")
-    finally:
-        django.setup()
-        call_command("makemigrations", interactive=False)
-        call_command("migrate", interactive=False)
-        print("Datenbank ist bereit.")
+        print("Database will be created …")
+
+    call_command("makemigrations", interactive=False)
+    call_command("migrate", interactive=False)
+
+    if created_new:
         populate_test_data()
+
+    print(f"Project database ready: {db_path}")
 
 
 def ensure_superuser():
