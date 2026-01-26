@@ -20,9 +20,3 @@ def update_role(request, role_id):
         form = RoleForm(instance=role)  # Bestehende Werte setzen
 
     return render(request, 'resources/edit_role.html', {'form': form, 'role': role})
-
-
-def delete_role(request, role_id):
-    role = get_object_or_404(Role, id=role_id)
-    role.delete()
-    return redirect('timetable-index')

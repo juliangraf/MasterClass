@@ -20,9 +20,3 @@ def update_resource(request, resource_id):
         form = ResourceForm(instance=resource)  # Bestehende Werte setzen
 
     return render(request, 'resources/edit_resource.html', {'form': form, 'resource': resource})
-
-
-def delete_resource(request, resource_id):
-    resource = get_object_or_404(Resource, id=resource_id)
-    resource.delete()
-    return redirect('timetable-index')

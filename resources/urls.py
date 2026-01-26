@@ -3,13 +3,16 @@ from django.urls import path
 
 from masterclass import settings
 from .views import *
-from .views.AddEventView import add_event
-from .views.AddResourceView import AddResourceView
-from .views.AddRoleView import add_role
-from .views.EditEventView import update_event
-from .views.EditResourceView import delete_resource, update_resource
-from .views.EditRoleView import update_role, delete_role
+from resources.views.Event.AddEventView import add_event
+from resources.views.Ressource.AddResourceView import AddResourceView
+from resources.views.Role.AddRoleView import add_role
+from resources.views.Event.EditEventView import update_event
+from resources.views.Ressource.EditResourceView import update_resource
+from resources.views.Role.EditRoleView import update_role
+from .views.Event.DeleteEventView import delete_event
 from .views.ProjectSettings import project_settings
+from .views.Ressource.DeleteRessourceView import delete_resource
+from .views.Role.DeleteRoleView import delete_role
 
 urlpatterns = [
     path('', TimetableIndex.as_view(), name='timetable-home'),
@@ -28,6 +31,7 @@ urlpatterns = [
     path('role/delete/<int:role_id>/', delete_role, name='delete-role'),
     path('event/add/', add_event, name='add-event'),
     path('event/edit/<int:event_id>/', update_event, name='update-event'),
+    path("events/<int:event_id>/delete/", delete_event, name="event-delete"),
 
     path('resource/<int:pk>', ResourceView.as_view(), name="resource"),
     path('resource/<int:pk>/dependency/<int:dependency>', ResourceDependenciesView.as_view(),

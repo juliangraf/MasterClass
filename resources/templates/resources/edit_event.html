@@ -124,6 +124,15 @@
 
             <div class="button-container">
                 <a href="javascript:history.back()" class="btn btn-secondary">Zurück</a>
+
+                <button type="submit"
+                        class="btn btn-danger"
+                        formaction="{% url 'event-delete' event.id %}"
+                        formmethod="post"
+                        onclick="return confirm('Ereignis wirklich löschen?');">
+                    Löschen
+                </button>
+
                 <button type="submit" class="btn btn-primary">Speichern</button>
             </div>
         </form>
