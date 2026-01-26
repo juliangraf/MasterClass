@@ -26,6 +26,10 @@ def populate_test_data():
     if Role.objects.count() > 0:
         return
 
+    # Projekt anlegen (von heute eine Woche)
+    today = timezone.now().date()
+    Project.objects.create(label="MeinName", start_date=today, end_date=today + timedelta(days=5))
+
     # Rollen anlegen
     role_teacher = Role.objects.create(label="Lehrer", plural_label="Lehrer", weight=1)
     role_student = Role.objects.create(label="Schüler", plural_label="Schüler", weight=2)

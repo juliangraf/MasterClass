@@ -102,9 +102,22 @@ class Event(models.Model):
 
 
 class Project(models.Model):
-    label = models.CharField(max_length=32)
+    label = models.CharField(max_length=32, blank=True, null=True)
     start_date = models.DateField()
     end_date = models.DateField()
+
+    cover_image_path = models.CharField(
+        max_length=512,
+        blank=True,
+        null=True,
+        help_text="Absolute path to the cover image"
+    )
+    sponsor_image_path = models.CharField(
+        max_length=512,
+        blank=True,
+        null=True,
+        help_text="Absolute path to the sponsor image"
+    )
 
     def __str__(self):
         return self.label

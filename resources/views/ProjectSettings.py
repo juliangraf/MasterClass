@@ -1,15 +1,15 @@
 from django.shortcuts import render, redirect
 
 from resources.froms import ProjectForm
-
+from resources.models import Project
 
 def project_settings(request):
+    project = Project.objects.first()
+
+    form = ProjectForm(request.POST or None, instance=project)
     if request.method == "POST":
-        form = ProjectForm(request.POST)
         if form.is_valid():
             form.save()
-            referer = request.session.get('referer', 'timetable-index')  # Use session variable for referer
-            return redirect(referer)
-    else:
-        form = ProjectForm()
+            return redirect("timetable-index")
+
     return render(request, "resources/project_settings.html", {"form": form})
