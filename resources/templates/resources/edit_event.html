@@ -93,6 +93,17 @@
             <label for="{{ form.label.id_for_label }}">Bezeichnung</label>
             {{ form.label }}
 
+            <div class="checkbox-item">
+                <label for="{{ form.is_global.id_for_label }}">
+                    <input type="checkbox"
+                           id="{{ form.is_global.id_for_label }}"
+                           name="{{ form.is_global.name }}"
+                           value="true"
+                           {% if form.is_global.value %}checked{% endif %}>
+                    Globales Ereignis
+                </label>
+            </div>
+
             <label for="{{ form.start.id_for_label }}">Start</label>
             <input type="datetime-local" name="start" value="{{ form.start.value|date:'Y-m-d\TH:i' }}"/>
             <label for="{{ form.end.id_for_label }}">Ende</label>
